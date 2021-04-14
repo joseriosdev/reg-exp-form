@@ -9,36 +9,52 @@
 </head>
 <body class="bg-dark">
   <main class="container">
-    <h1 class="text-center display-3 text-muted m-4">Regular Expresion Form</h1>
+    <h1 class="text-center display-3 text-muted m-4">Regular Expression Form</h1>
     <form class="bg-light container rounded p-4">
       <div class="input-group m-3">
-        <label class="input-group-text" id="basic-addon2">Full Name</label>
-        <input type="text" class="form-control" placeholder="name">
+        <label class="input-group-text" for="name">Full Name</label>
+        <input id="name" type="text" class="form-control" placeholder="first and last names" pattern="^[a-zA-Z ]{2,20}$" required>
+        <p class="invalid-feedback">
+          Enter a valid name (2 to 20 letters long)
+        </p>
       </div>
       <div class="input-group m-3">
-        <label class="input-group-text" id="basic-addon2">Email</label>
-        <input type="email" class="form-control" placeholder="email">
+        <label class="input-group-text">Email</label>
+        <input id="email" type="text" class="form-control" placeholder="email" required>
+        <p class="invalid-feedback">
+          Enter a valid email
+        </p>
       </div>
       <div class="input-group m-3">
         <label class="input-group-text" id="basic-addon2">Phone</label>
-        <input type="number" class="form-control" placeholder="cellphone number">
+        <input id="phone" type="tel" class="form-control" placeholder="cellphone number" required>
+        <p class="invalid-feedback">
+          Enter a valid phone number please
+        </p>
       </div>
       <div class="input-group m-3">
         <label class="input-group-text" id="basic-addon2">Password</label>
-        <input type="password" class="form-control" placeholder="private">
+        <input id="password" type="password" class="form-control" placeholder="private" required>
+        <p class="invalid-feedback">
+          Not a strong password. Need help? <button type="button" class="btn btn-outline-info btn-sm" id="pass-btn-gen">Generate Password</button>
+        </p>
+        <p class="input-group">
+          See password:&ThickSpace;
+          <input type="checkbox" id="password-look" style="height:100%" onclick="passwordToggle()">
+        </p>
       </div>
       <div class="input-group m-3">
         <label class="input-group-text" id="basic-addon2">Zipcode</label>
-        <input type="text" class="form-control" placeholder="zipcode">
+        <input id="zipcode" type="text" class="form-control" placeholder="zipcode" required>
+        <p class="invalid-feedback">
+          Enter a valid US zipcode
+        </p>
       </div>
-      <!-- <div class="container p-3 mx-auto">
-        <input type="submit" value="Submit" class="btn btn-primary w-50">
-      </div> -->
       <div class="mx-auto text-center">
         <input type="submit" value="Submit" class="btn btn-primary w-50" >
       </div>
       <footer class="mt-4">
-        <a href="https://twitter.com/joseriosdev" class="text-danger text-center">&#64;joseriosdev</a>
+        Coded by <a href="https://twitter.com/joseriosdev" class="text-primary text-center">&#64;joseriosdev</a>
       </footer>
     </form>
   </main>
